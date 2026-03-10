@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XLIIs — Onboarding Review</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0a0a14;
+    color: #33ff33;
+    font-family: 'VT323', monospace;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 24px;
+    text-align: center;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.15) 2px, rgba(0,0,0,0.15) 4px);
+    pointer-events: none;
+    z-index: 1000;
+  }
+  .title {
+    font-size: 28px;
+    letter-spacing: 4px;
+    margin-bottom: 24px;
+    text-shadow: 0 0 12px rgba(51, 255, 51, 0.4);
+  }
+  .body-text {
+    font-size: 16px;
+    line-height: 1.8;
+    opacity: 0.8;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+  .body-text p {
+    margin-bottom: 16px;
+  }
+  .how-title {
+    font-size: 20px;
+    letter-spacing: 3px;
+    margin-bottom: 14px;
+    opacity: 1;
+    color: #33ff33;
+  }
+  .btn {
+    margin-top: 32px;
+    font-family: 'VT323', monospace;
+    font-size: 22px;
+    padding: 12px 40px;
+    letter-spacing: 2px;
+    background: transparent;
+    color: #33ff33;
+    border: 1px solid #33ff33;
+    border-radius: 4px;
+    cursor: pointer;
+    text-shadow: 0 0 8px rgba(51, 255, 51, 0.3);
+  }
+  .note {
+    margin-top: 48px;
+    font-size: 14px;
+    opacity: 0.3;
+    letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+  <div class="title">WELCOME TO XLIIs</div>
+  <div class="body-text">
+    <p>We find hidden collections of Grateful Dead tapes from collectors around the world and bring them to you for a limited run.</p>
+    <p>Each collection is on loan from a different collector — someone who spent years tracking down pristine soundboard recordings and curating them around a single era.</p>
+    <p style="margin-bottom:24px;">Every three months, a new set of collections arrives.</p>
+    <div class="how-title">HOW IT WORKS</div>
+    <p style="margin-bottom:0;">Pick a collection. Spin for a random tape or browse by year, venue, or state. Turn your phone sideways during a show to see the collector's original J-card.</p>
+  </div>
+  <button class="btn">[ LET'S GO ]</button>
+  <div class="note">This is a review mockup — in the app this shows once on first launch</div>
+</body>
+</html>
