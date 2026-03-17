@@ -10,91 +10,114 @@ body { background: #111; color: #eee; font-family: -apple-system, system-ui, san
 h1 { text-align: center; font-size: 24px; margin-bottom: 6px; letter-spacing: 2px; }
 .subtitle { text-align: center; color: #888; margin-bottom: 30px; font-size: 14px; }
 .section-label { text-align: center; font-size: 16px; color: #f0c040; margin: 30px 0 16px; letter-spacing: 1px; }
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; margin-bottom: 40px; }
-.card { background: #1a1a1a; border-radius: 8px; overflow: hidden; }
-.card img { width: 100%; display: block; cursor: pointer; }
-.card img:hover { opacity: 0.9; }
-.card-info { padding: 10px 14px; text-align: center; }
-.card-num { color: #f0c040; font-weight: bold; font-size: 16px; }
-.card-desc { color: #888; font-size: 13px; margin-top: 4px; }
-.card-warn { color: #e05050; font-size: 12px; margin-top: 4px; }
-.current { border: 2px solid #555; }
+.options { max-width: 420px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+.option-card {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #333;
+  height: 160px;
+  cursor: pointer;
+}
+.option-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.option-label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  padding: 8px 12px;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+.option-num { color: #f0c040; font-weight: bold; }
+.option-desc { color: #ccc; font-size: 12px; }
+.option-warn { color: #e05050; font-size: 11px; }
+.comparison { max-width: 420px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+.comp-card {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #333;
+  height: 160px;
+}
+.comp-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.comp-label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  padding: 6px 12px;
+  font-size: 11px;
+  color: #888;
+  letter-spacing: 1px;
+}
 .modal { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.95); z-index: 200; justify-content: center; align-items: center; cursor: pointer; }
 .modal.active { display: flex; }
 .modal img { max-width: 95vw; max-height: 95vh; object-fit: contain; }
-.comparison { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin-top: 30px; margin-bottom: 40px; }
-.comp-label { text-align: center; color: #888; font-size: 12px; letter-spacing: 1px; margin-bottom: 8px; }
 </style>
 </head>
 <body>
 
-<h1>NEW ANIMAL ARTWORK OPTIONS</h1>
-<p class="subtitle">Circus elephants — hats, blankets, performing tricks</p>
+<h1>NEW ANIMAL OPTIONS</h1>
+<p class="subtitle">Shown at actual collection card dimensions (420 x 160)</p>
 
-<div class="section-label">CURRENT VERSION</div>
-<div class="grid" style="max-width: 340px; margin-left: auto; margin-right: auto;">
-  <div class="card current">
-    <img src="new_animal_current.jpg" alt="Current" onclick="openModal(this.src)">
-    <div class="card-info">
-      <div class="card-num">CURRENT</div>
-      <div class="card-desc">Plain walking elephants</div>
+<div class="section-label">NEW OPTIONS</div>
+<div class="options">
+  <div class="option-card" onclick="openModal('new_animal_v11.jpg')">
+    <img src="new_animal_v11.jpg" alt="Option 11">
+    <div class="option-label">
+      <span class="option-num">11</span> <span class="option-desc">Hats + blankets, on balls</span>
+      <div class="option-warn">Has red in hats</div>
+    </div>
+  </div>
+  <div class="option-card" onclick="openModal('new_animal_v12.jpg')">
+    <img src="new_animal_v12.jpg" alt="Option 12">
+    <div class="option-label">
+      <span class="option-num">12</span> <span class="option-desc">Navy only, on balls + platforms</span>
+    </div>
+  </div>
+  <div class="option-card" onclick="openModal('new_animal_v13.jpg')">
+    <img src="new_animal_v13.jpg" alt="Option 13">
+    <div class="option-label">
+      <span class="option-num">13</span> <span class="option-desc">On pedestals + balls, mixed poses</span>
+    </div>
+  </div>
+  <div class="option-card" onclick="openModal('new_animal_v14.jpg')">
+    <img src="new_animal_v14.jpg" alt="Option 14">
+    <div class="option-label">
+      <span class="option-num">14</span> <span class="option-desc">Varied sizes, striped balls</span>
+    </div>
+  </div>
+  <div class="option-card" onclick="openModal('new_animal_v15.jpg')">
+    <img src="new_animal_v15.jpg" alt="Option 15">
+    <div class="option-label">
+      <span class="option-num">15</span> <span class="option-desc">Polka-dot balls, scattered</span>
+      <div class="option-warn">Has red in hats</div>
     </div>
   </div>
 </div>
 
-<div class="section-label">CIRCUS ELEPHANTS</div>
-<div class="grid">
-  <div class="card">
-    <img src="new_animal_circus_6.jpg" alt="Option 6" onclick="openModal(this.src)">
-    <div class="card-info">
-      <div class="card-num">OPTION 6</div>
-      <div class="card-desc">Hats + ornate blankets, uniform pattern</div>
-    </div>
-  </div>
-  <div class="card">
-    <img src="new_animal_circus_7.jpg" alt="Option 7" onclick="openModal(this.src)">
-    <div class="card-info">
-      <div class="card-num">OPTION 7</div>
-      <div class="card-desc">Balancing on polka-dot balls, party hats</div>
-    </div>
-  </div>
-  <div class="card">
-    <img src="new_animal_circus_8.jpg" alt="Option 8" onclick="openModal(this.src)">
-    <div class="card-info">
-      <div class="card-num">OPTION 8</div>
-      <div class="card-desc">On drums + platforms, ornate blankets</div>
-    </div>
-  </div>
-  <div class="card">
-    <img src="new_animal_circus_9.jpg" alt="Option 9" onclick="openModal(this.src)">
-    <div class="card-info">
-      <div class="card-num">OPTION 9</div>
-      <div class="card-desc">Mixed poses, hats + balls, varied sizes</div>
-    </div>
-  </div>
-  <div class="card">
-    <img src="new_animal_circus_10.jpg" alt="Option 10" onclick="openModal(this.src)">
-    <div class="card-info">
-      <div class="card-num">OPTION 10</div>
-      <div class="card-desc">Striped hats + balls</div>
-      <div class="card-warn">Has red — doesn't match navy-only palette</div>
-    </div>
-  </div>
-</div>
-
-<div class="section-label">SIDE BY SIDE WITH OTHER COLLECTIONS</div>
+<div class="section-label">OTHER COLLECTIONS (FOR COMPARISON)</div>
 <div class="comparison">
-  <div>
+  <div class="comp-card">
+    <img src="cornell_and_company.jpg" alt="Cornell">
     <div class="comp-label">CORNELL AND COMPANY</div>
-    <img src="cornell_and_company.jpg" style="width:100%; border-radius:8px;" onclick="openModal(this.src)">
   </div>
-  <div>
+  <div class="comp-card">
+    <img src="wall_of_sound.jpg" alt="Wall of Sound">
     <div class="comp-label">SIX HUNDRED FOUR</div>
-    <img src="wall_of_sound.jpg" style="width:100%; border-radius:8px;" onclick="openModal(this.src)">
   </div>
-  <div>
+  <div class="comp-card">
+    <img src="young_bettys.jpg" alt="Young Bettys">
     <div class="comp-label">YOUNG BETTYS</div>
-    <img src="young_bettys.jpg" style="width:100%; border-radius:8px;" onclick="openModal(this.src)">
   </div>
 </div>
 
