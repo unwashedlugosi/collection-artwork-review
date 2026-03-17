@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New Animal Artwork Options</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #111; color: #eee; font-family: -apple-system, system-ui, sans-serif; padding: 20px; }
+h1 { text-align: center; font-size: 24px; margin-bottom: 6px; letter-spacing: 2px; }
+.subtitle { text-align: center; color: #888; margin-bottom: 30px; font-size: 14px; }
+.section-label { text-align: center; font-size: 16px; color: #f0c040; margin: 30px 0 16px; letter-spacing: 1px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; margin-bottom: 40px; }
+.card { background: #1a1a1a; border-radius: 8px; overflow: hidden; }
+.card img { width: 100%; display: block; cursor: pointer; }
+.card img:hover { opacity: 0.9; }
+.card-info { padding: 10px 14px; text-align: center; }
+.card-num { color: #f0c040; font-weight: bold; font-size: 16px; }
+.card-desc { color: #888; font-size: 13px; margin-top: 4px; }
+.current { border: 2px solid #555; }
+.modal { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.95); z-index: 200; justify-content: center; align-items: center; cursor: pointer; }
+.modal.active { display: flex; }
+.modal img { max-width: 95vw; max-height: 95vh; object-fit: contain; }
+.comparison { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin-top: 30px; margin-bottom: 40px; }
+.comp-label { text-align: center; color: #888; font-size: 12px; letter-spacing: 1px; margin-bottom: 8px; }
+</style>
+</head>
+<body>
+
+<h1>NEW ANIMAL ARTWORK OPTIONS</h1>
+<p class="subtitle">Dancing elephants in the Grateful Dead bear pose</p>
+
+<div class="section-label">CURRENT VERSION</div>
+<div class="grid" style="max-width: 340px; margin-left: auto; margin-right: auto;">
+  <div class="card current">
+    <img src="new_animal_current.jpg" alt="Current" onclick="openModal(this.src)">
+    <div class="card-info">
+      <div class="card-num">CURRENT</div>
+      <div class="card-desc">Walking elephants (non-dancing)</div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">NEW OPTIONS</div>
+<div class="grid">
+  <div class="card">
+    <img src="new_animal_circus_1.jpg" alt="Option 1" onclick="openModal(this.src)">
+    <div class="card-info">
+      <div class="card-num">OPTION 1</div>
+      <div class="card-desc">Filled/shaded, uniform grid</div>
+    </div>
+  </div>
+  <div class="card">
+    <img src="new_animal_circus_2.jpg" alt="Option 2" onclick="openModal(this.src)">
+    <div class="card-info">
+      <div class="card-num">OPTION 2</div>
+      <div class="card-desc">Outline style, scattered angles</div>
+    </div>
+  </div>
+  <div class="card">
+    <img src="new_animal_circus_3.jpg" alt="Option 3" onclick="openModal(this.src)">
+    <div class="card-info">
+      <div class="card-num">OPTION 3</div>
+      <div class="card-desc">Outline, uniform spacing</div>
+    </div>
+  </div>
+  <div class="card">
+    <img src="new_animal_circus_4.jpg" alt="Option 4" onclick="openModal(this.src)">
+    <div class="card-info">
+      <div class="card-num">OPTION 4</div>
+      <div class="card-desc">Solid silhouettes, chunky stamp</div>
+    </div>
+  </div>
+  <div class="card">
+    <img src="new_animal_circus_5.jpg" alt="Option 5" onclick="openModal(this.src)">
+    <div class="card-info">
+      <div class="card-num">OPTION 5</div>
+      <div class="card-desc">Mid-weight, natural proportions</div>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">SIDE BY SIDE WITH OTHER COLLECTIONS</div>
+<div class="comparison">
+  <div>
+    <div class="comp-label">CORNELL AND COMPANY</div>
+    <img src="cornell_and_company.jpg" style="width:100%; border-radius:8px;" onclick="openModal(this.src)">
+  </div>
+  <div>
+    <div class="comp-label">SIX HUNDRED FOUR</div>
+    <img src="wall_of_sound.jpg" style="width:100%; border-radius:8px;" onclick="openModal(this.src)">
+  </div>
+  <div>
+    <div class="comp-label">YOUNG BETTYS</div>
+    <img src="young_bettys.jpg" style="width:100%; border-radius:8px;" onclick="openModal(this.src)">
+  </div>
+</div>
+
+<div id="modal" class="modal" onclick="this.classList.remove('active')">
+  <img id="modal-img" src="">
+</div>
+
+<script>
+function openModal(src) {
+  document.getElementById('modal-img').src = src;
+  document.getElementById('modal').classList.add('active');
+}
+</script>
+
+</body>
+</html>
