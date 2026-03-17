@@ -17,6 +17,7 @@ h1 { text-align: center; font-size: 24px; margin-bottom: 6px; letter-spacing: 2p
 .card-info { padding: 10px 14px; text-align: center; }
 .card-num { color: #f0c040; font-weight: bold; font-size: 16px; }
 .card-desc { color: #888; font-size: 13px; margin-top: 4px; }
+.card-warn { color: #e05050; font-size: 12px; margin-top: 4px; }
 .current { border: 2px solid #555; }
 .modal { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.95); z-index: 200; justify-content: center; align-items: center; cursor: pointer; }
 .modal.active { display: flex; }
@@ -28,7 +29,7 @@ h1 { text-align: center; font-size: 24px; margin-bottom: 6px; letter-spacing: 2p
 <body>
 
 <h1>NEW ANIMAL ARTWORK OPTIONS</h1>
-<p class="subtitle">Dancing elephants in the Grateful Dead bear pose</p>
+<p class="subtitle">Circus elephants — hats, blankets, performing tricks</p>
 
 <div class="section-label">CURRENT VERSION</div>
 <div class="grid" style="max-width: 340px; margin-left: auto; margin-right: auto;">
@@ -36,46 +37,47 @@ h1 { text-align: center; font-size: 24px; margin-bottom: 6px; letter-spacing: 2p
     <img src="new_animal_current.jpg" alt="Current" onclick="openModal(this.src)">
     <div class="card-info">
       <div class="card-num">CURRENT</div>
-      <div class="card-desc">Walking elephants (non-dancing)</div>
+      <div class="card-desc">Plain walking elephants</div>
     </div>
   </div>
 </div>
 
-<div class="section-label">NEW OPTIONS</div>
+<div class="section-label">CIRCUS ELEPHANTS</div>
 <div class="grid">
   <div class="card">
-    <img src="new_animal_circus_1.jpg" alt="Option 1" onclick="openModal(this.src)">
+    <img src="new_animal_circus_6.jpg" alt="Option 6" onclick="openModal(this.src)">
     <div class="card-info">
-      <div class="card-num">OPTION 1</div>
-      <div class="card-desc">Filled/shaded, uniform grid</div>
+      <div class="card-num">OPTION 6</div>
+      <div class="card-desc">Hats + ornate blankets, uniform pattern</div>
     </div>
   </div>
   <div class="card">
-    <img src="new_animal_circus_2.jpg" alt="Option 2" onclick="openModal(this.src)">
+    <img src="new_animal_circus_7.jpg" alt="Option 7" onclick="openModal(this.src)">
     <div class="card-info">
-      <div class="card-num">OPTION 2</div>
-      <div class="card-desc">Outline style, scattered angles</div>
+      <div class="card-num">OPTION 7</div>
+      <div class="card-desc">Balancing on polka-dot balls, party hats</div>
     </div>
   </div>
   <div class="card">
-    <img src="new_animal_circus_3.jpg" alt="Option 3" onclick="openModal(this.src)">
+    <img src="new_animal_circus_8.jpg" alt="Option 8" onclick="openModal(this.src)">
     <div class="card-info">
-      <div class="card-num">OPTION 3</div>
-      <div class="card-desc">Outline, uniform spacing</div>
+      <div class="card-num">OPTION 8</div>
+      <div class="card-desc">On drums + platforms, ornate blankets</div>
     </div>
   </div>
   <div class="card">
-    <img src="new_animal_circus_4.jpg" alt="Option 4" onclick="openModal(this.src)">
+    <img src="new_animal_circus_9.jpg" alt="Option 9" onclick="openModal(this.src)">
     <div class="card-info">
-      <div class="card-num">OPTION 4</div>
-      <div class="card-desc">Solid silhouettes, chunky stamp</div>
+      <div class="card-num">OPTION 9</div>
+      <div class="card-desc">Mixed poses, hats + balls, varied sizes</div>
     </div>
   </div>
   <div class="card">
-    <img src="new_animal_circus_5.jpg" alt="Option 5" onclick="openModal(this.src)">
+    <img src="new_animal_circus_10.jpg" alt="Option 10" onclick="openModal(this.src)">
     <div class="card-info">
-      <div class="card-num">OPTION 5</div>
-      <div class="card-desc">Mid-weight, natural proportions</div>
+      <div class="card-num">OPTION 10</div>
+      <div class="card-desc">Striped hats + balls</div>
+      <div class="card-warn">Has red — doesn't match navy-only palette</div>
     </div>
   </div>
 </div>
